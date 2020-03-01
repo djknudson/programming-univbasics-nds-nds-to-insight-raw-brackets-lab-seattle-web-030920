@@ -20,9 +20,17 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-
-  directors_database.each do |index|
-    director_name = directors_database[index]
-    results[director_name] = 10
-  end
+  name_index = 0
+  
+  while name_index < directors_database.length do
+    gross_index = 0
+    gross_amount = 0
+    director_name = directors_database[index][:name]
+    while gross_index < directors_database[name_index][:movies].length do
+      current_amount = directors_totals[name_index][:movies][gross_index][worldwide_gross]
+      gross_amount += current_amount
+    end
+    result[director_name] = gross_amount
+  end 
+  return result
 end
