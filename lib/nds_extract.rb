@@ -27,11 +27,11 @@ def directors_totals(nds)
     director_name = directors_database[name_index][:name]
 
     while gross_index < directors_database[name_index][:movies].length do
-      current_amount = directors_totals[name_index][:movies][gross_index][worldwide_gross].to_i
+      current_amount = directors_totals[name_index][:movies][gross_index][worldwide_gross]
       gross_amount += current_amount
       gross_index += 1
     end
-    result[director_name] = gross_amount.to_s
+    result[director_name] = gross_amount
     name_index += 1
   end
   return result
