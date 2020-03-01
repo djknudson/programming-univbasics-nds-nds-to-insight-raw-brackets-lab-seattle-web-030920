@@ -21,7 +21,7 @@ def directors_totals(nds)
   #
   # Be sure to return the result at the end!
   name_index = 0
-  
+
   while name_index < directors_database.length do
     gross_index = 0
     gross_amount = 0
@@ -31,6 +31,6 @@ def directors_totals(nds)
       gross_amount += current_amount
     end
     result[director_name] = gross_amount
-  end 
+  end
   return result
 end
