@@ -29,7 +29,7 @@ def directors_totals(nds)
       current_amount = directors_totals[name_index][:movies][gross_index][worldwide_gross]
       gross_amount += current_amount
     end
-    result[director_name] = gross_amount
+    result[director_name] = gross_amount.to_s
   end
   return result
 end
