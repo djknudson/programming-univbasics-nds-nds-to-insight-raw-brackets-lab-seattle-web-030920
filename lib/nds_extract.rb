@@ -21,7 +21,8 @@ def directors_totals(nds)
   #
   # Be sure to return the result at the end!
 
-  directors_database.each do |key, value|
-    results[key[:name]] = 10
+  directors_database.each do |index|
+    director_name = directors_database[index]
+    results[director_name] = 10
   end
 end
