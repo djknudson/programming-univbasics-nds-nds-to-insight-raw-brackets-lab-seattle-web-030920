@@ -23,4 +23,5 @@ def directors_totals(nds)
 
   directors_database.each do |key, value|
     puts key[:name]
+  end
 end
